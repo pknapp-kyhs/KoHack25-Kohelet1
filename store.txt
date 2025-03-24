@@ -1,0 +1,31 @@
+global canvas
+
+ # canvas = tk.Canvas(root, width=400, height=400, bg='white')
+
+
+
+
+
+
+
+
+  # Function to create a family member with a button (profile) and a label (name)
+  def create_member(x, y, name):
+      btn = tk.Button(root, width=5, height=2)  # Blank button as profile photo
+      btn.place(x=x, y=y)
+      lbl = tk.Label(root, text=name)
+      lbl.place(x=x, y=y+40)
+      return x + 20, y + 20  # Return center position for line drawing
+
+  # Grandparents
+  gp1_x, gp1_y = create_member(100, 50, "Grandpa 1")
+  gp2_x, gp2_y = create_member(250, 50, "Grandma 1")
+
+  # Parents
+  p1_x, p1_y = create_member(50, 150, "Father")
+  p2_x, p2_y = create_member(200, 150, "Mother")
+
+  # Children
+  c1_x, c1_y = create_member(50, 250, "Child 1")
+  c2_x, c2_y = create_member(150, 250, "Child 2")
+  c3_x, c3_y = create_member(250, 250, "Child 3")
